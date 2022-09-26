@@ -10,7 +10,7 @@ class Node{
     public:
     int data;
     Node*next;
-    //Calling Node constructor
+    //Node constructor
     Node(int data)
     {
         this->data=data;
