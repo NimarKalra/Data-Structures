@@ -21,8 +21,11 @@ class Node{
 void append(Node* &head, int data){
     Node* temp = head;
     Node* new_node=new Node(data);
-    if(temp==NULL){head=new_node;new_node->next=head;
-    return;}
+    if(temp==NULL)
+    {
+        head=new_node;new_node->next=head;
+        return;
+    }
     while(temp->next!=head){temp=temp->next;}   //This condition establishes that the traversing element(temp) has reached the first element
     temp->next=new_node;
     new_node->next=head;
@@ -39,6 +42,7 @@ int main(){
     append(head,1);
     append(head,2);
     append(head,3);
+    append(head,4);
     print(head);
 }
 /*
@@ -47,10 +51,9 @@ while(temp->next!=head)
 {
     temp=temp->next;
 }
-establishes that the traversing element/variable has reached the first element.
+establishes that the traversing element has reached the first element.
 We Know that in circular linked list the last node of linked list points to head of that linked list, so we can check if any node points to head of linked list then that node is the end of circular linked list.
 */
-
 
 /*Question.2  What are the practical applications of a circular linked list? (Try to find applications in your respective fields).
 Practical applications of circular linked list:
