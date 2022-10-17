@@ -31,7 +31,7 @@ int binary_search(int arr[],int i,int j,int key){
     }
     return -1;  // when element is not present we will return -1
 }
-//Enhanced binary search function or Binary search for array with unknown lenght
+//Enhanced binary search function or Binary search for array with unknown length
 int binary_search_unknown(int arr[],int key){
     //Initializing i as 0 and j as 1.
     int i=0,j=1;
@@ -40,5 +40,14 @@ int binary_search_unknown(int arr[],int key){
         i=j;
         j=2*j;
     }
+
     //Now making call for Simple Binary Search on range i to j.
     return binary_search(arr,i,j,key);
+}
+int main()
+{
+    int arr[5]={1,2,3,4,5};
+    int key=3;
+    cout<<binary_search_unknown(arr,key)<<endl;
+    return 0;
+}
